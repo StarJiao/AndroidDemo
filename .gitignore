@@ -1,0 +1,9 @@
+*.iml
+.gradle
+/local.properties
+.idea
+build
+.externalNativeBuild
+将删除 libs/
+将删除 src/main/java/
+将删除 src/main/res/drawable/

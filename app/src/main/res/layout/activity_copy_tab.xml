@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tab01"
+        android:layout_width="0dip"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="@string/display" />
+
+    <TextView
+        android:id="@+id/tab02"
+        android:layout_width="0dip"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="@string/display" />
+
+    <TextView
+        android:id="@+id/tab03"
+        android:layout_width="0dip"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="@string/display" />
+
+</LinearLayout>

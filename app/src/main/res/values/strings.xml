@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- default -->
+    <string name="app_name">Demo</string>
+    <string name="display">Display</string>
+    <!-- main activity -->
+    <string-array name="feature_list">
+        <item>ViewPager示例</item>
+        <item>SP示例</item>
+        <item>动画切换示例</item>
+        <item>RxJava示例</item>
+        <item>view切换示例</item>
+        <item>拍照</item>
+        <item>仿tab</item>
+        <item>数字选择器</item>
+        <item>打开系统设置页面</item>
+        <item>Fragment切换示例</item>
+        <item>条码扫描</item>
+        <item>SystemUI变换示例</item>
+        <item>MVP</item>
+        <item>测试自定义view</item>
+    </string-array>
+    <!-- asynctask -->
+    <string name="begin_to_download">开始下载</string>
+    <string name="redownload">重新下载</string>
+    <string name="save_to_local">保存到本地</string>
+    <string name="no_data">No data</string>
+    <!-- animation -->
+    <string name="first_activity">第一个界面</string>
+    <string name="second_activity">第二个界面</string>
+    <string name="go_to_next_activity">去下一个界面</string>
+    <string name="text_demo">
+<![CDATA[
+<h2><font color="#241989">预约挂号的办理条件</font></h2><p><font color="#000000">就诊者在江苏省人民医院凭身份证活其他身份证明办理条码病历、市民卡</font><font color="#241989">（有市民卡的需办理预约开通手续）</font><font color="#000000">，并存储预交金，设立庄户密码。在班里手续时一定要留下就诊者正确信息及手机联系方式。</font></p>
+<h2><font color="#241989">预约挂号的操作</font></h2><p><font color="#000000">预约时限为一周，预约起止时间与门诊现场挂号开窗时间保持一致，具体操作方式见预约挂号规则。病员就诊顺序与各种方式挂号成功的时间先后顺序一致，而与挂号的方式无关。</font><font color="#241989">预约成功后，系统将自动从账户内扣除挂号费。</font></p>
+]]>
+    </string>
+
+    <!-- view switcher -->
+    <string name="button_load_data">Load More Items</string>
+    <string name="view_process_bar">Loading…</string>
+
+    <!-- camera demo -->
+    <string name="to_take_photo">用相机拍照</string>
+    <string name="to_choose_photo">从相册中选取</string>
+    <string name="to_upload">上传</string>
+
+    <!-- scan -->
+    <string name="start_scan">开始扫描</string>
+    <string name="start_create">开始生成</string>
+    <!-- ##### zxing-lib ##### -->
+    <string name="zxing_msg_default_status">请将二维码置于取景框内扫描</string>
+
+</resources>

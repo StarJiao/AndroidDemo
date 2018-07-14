@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="gray">#D3D6D7</color>
+    <color name="red">#FF0000</color>
+    <color name="gray_h">#333333</color>
+    <color name="gray_m">#666666</color>
+    <color name="gray_l">#999999</color>
+    <color name="text_color">#5d6f71</color>
+    <!-- ##### zxing-lib ##### -->
+    <color name="possible_result_points">#c0ffbd21</color>
+    <!-- Android standard ICS color -->
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+
+</resources>
