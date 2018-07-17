@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    flavorDimensions "buildTypes"
     buildTypes {
         release {
             minifyEnabled false
@@ -18,6 +19,15 @@ android {
     }
     lintOptions {
         abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "sdeno-${variant.buildType.name}-${variant.versionName}.apk"
+        }
     }
 }
 
