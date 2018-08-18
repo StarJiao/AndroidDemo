@@ -1,5 +1,8 @@
 package com.example.mydemo;
 
+/**
+ * 链表节点
+ */
 public class Node {
     private int data = -1;
     private Node next;

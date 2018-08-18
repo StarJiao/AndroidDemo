@@ -2,6 +2,7 @@ package com.example.mydemo;
 
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
@@ -15,66 +16,25 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
-        //        fun();
-        //        foo();
-        foo1();
+//        fun();
+//        foo();
+//        foo1();
+//        sorter();
+    }
+
+    private void sorter() {
+        QuickSorter<Integer> quickSorter = new QuickSorter<>();
+        Integer numbers[] = new Integer[]{6, 9, 1, 0, 3, 2, 4, 8, 5, 7};
+        quickSorter.sort(numbers, 0, numbers.length - 1);
+        System.out.println(Arrays.toString(numbers));
     }
 
     private void fun() {
-        Node node = createList();
-        print(node);
-        reverseList(node);
-        print(node);
-    }
-
-    private Node createList() {
-        Node head = new Node(-1, null);
-
-        Node p = head;
-
-        for (int i = 0; i < 10; i++) {
-            Node node = new Node(i, null);
-            p.setNext(node);
-            p = node;
-        }
-        return head;
-    }
-
-    private void print(Node node) {
-        Node p = node;
-        if (p == null) {
-            return;
-        }
-        do {
-            System.out.print(p.getNext().getData() + " ");
-            p = p.getNext();
-        } while (p.getNext() != null);
-        System.out.println();
-    }
-
-    private void reverseList(Node head) {
-        if (head == null) {//错误
-            return;
-        }
-        if (head.getNext() == null) {//空表
-            return;
-        }
-        if (head.getNext().getNext() == null) {//长度为1
-            return;
-        }
-
-        Node p = head.getNext();
-        Node q = head.getNext().getNext();
-
-        Node t;
-        while (q != null) {
-            t = q.getNext();
-            q.setNext(p);
-            p = q;
-            q = t;
-        }
-        head.getNext().setNext(null);
-        head.setNext(p);
+        Reverser reverser = new Reverser();
+        Node node = reverser.createList();
+        reverser.print(node);
+        reverser.reverseList(node);
+        reverser.print(node);
     }
 
     private void foo() {
