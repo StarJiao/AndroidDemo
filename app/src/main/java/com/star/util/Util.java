@@ -4,14 +4,9 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.PixelCopy;
-import android.view.Surface;
 import android.view.View;
 
 import com.google.zxing.BarcodeFormat;
@@ -153,7 +148,7 @@ public class Util {
         }
     }
 
-    public static void screenCut(Surface surface, int w, int h, final String filePath) {
+   /* public static void screenCut(Surface surface, int w, int h, final String filePath) {
         final Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             PixelCopy.request(
@@ -172,5 +167,5 @@ public class Util {
                     },
                     new Handler(Looper.getMainLooper()));
         }
-    }
+    }*/
 }

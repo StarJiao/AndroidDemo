@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,6 +13,7 @@ import android.widget.ListView;
 import com.star.demo.animation.FirstActivity;
 import com.star.demo.application.AppUtil;
 import com.star.demo.camera.CameraDemoActivity;
+import com.star.demo.compass.CompassActivity;
 import com.star.demo.customview.CustomViewActivity;
 import com.star.demo.fragment.InteractionDemoActivity;
 import com.star.demo.home.HomeWatcherReceiver;
@@ -91,7 +91,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                 intent.setClass(MainActivity.this, SampleActivity.class);
                 break;
             case 8:
-                startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS));
+                intent.setClass(MainActivity.this, CompassActivity.class);
                 break;
             case 9:
                 intent.setClass(MainActivity.this, InteractionDemoActivity.class);
