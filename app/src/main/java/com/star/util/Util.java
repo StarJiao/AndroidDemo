@@ -4,9 +4,15 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.PixelCopy;
+import android.view.Surface;
+import android.view.View;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
@@ -14,12 +20,16 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.Hashtable;
 
 /**
  * Created by Star on 2016/6/24.
  */
 public class Util {
+    private final static String TAG = "UTIL";
+
     public static String getIMEI(Context context) {
         return Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
     }
@@ -123,5 +133,44 @@ public class Util {
             e.printStackTrace();
         }
         return null;
+    }
+
+
+    public static void screenCut(View area, String filePath) {
+        area.setDrawingCacheEnabled(true);
+        area.buildDrawingCache();
+        Bitmap bitmap = Bitmap.createBitmap(area.getDrawingCache());
+        if (bitmap != null) {
+            try {
+                File file = new File(filePath);
+                FileOutputStream os = new FileOutputStream(file);
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os);
+                os.flush();
+                os.close();
+            } catch (Exception e) {
+                Log.e(TAG, e.getMessage());
+            }
+        }
+    }
+
+    public static void screenCut(Surface surface, int w, int h, final String filePath) {
+        final Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            PixelCopy.request(
+                    surface,
+                    bitmap,
+                    new PixelCopy.OnPixelCopyFinishedListener() {
+                        @Override
+                        public void onPixelCopyFinished(int copyResult) {
+                            if (copyResult == PixelCopy.SUCCESS) {
+                                Log.e(TAG, "SUCCESS");
+                                FileUtils.saveBitmapToJpegFile(bitmap, filePath);
+                            } else {
+                                Log.e(TAG, String.valueOf(copyResult));
+                            }
+                        }
+                    },
+                    new Handler(Looper.getMainLooper()));
+        }
     }
 }

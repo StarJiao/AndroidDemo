@@ -1,11 +1,6 @@
-package com.star.demo.rxjava;
+package com.example.mydemo;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
-
-import com.star.demo.R;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
@@ -17,17 +12,8 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 
-/**
- * Created by Star on 2016/6/2.
- */
-public class RxJavaDemoActivity extends Activity {
-    TextView textView;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
-        textView = findViewById(R.id.textview);
+public class RxDemo {
+    public void fun() {
         //被观察者
         /**************************/
         Observable<String> observable = Observable.create(new ObservableOnSubscribe<String>() {
@@ -81,20 +67,12 @@ public class RxJavaDemoActivity extends Activity {
 
             @Override
             public void onNext(String s) {
-                textView.append(s);
                 Log.i("tag", s + "Subscriber");
             }
         };
         observable.subscribe(observer);
         /**************************/
-        Consumer<String> action = new Consumer<String>() {
-            @Override
-            public void accept(String s) throws Exception {
-                textView.append(s);
-            }
-
-        };
-        observable.subscribe(action).dispose();
+        Consumer<String> action = (String s) -> System.out.println(s);
+        observable.subscribe(action);
     }
-
 }

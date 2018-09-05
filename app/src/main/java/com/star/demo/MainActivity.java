@@ -11,13 +11,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.star.demo.mvp.MvpActivity;
 import com.star.demo.animation.FirstActivity;
 import com.star.demo.application.AppUtil;
 import com.star.demo.camera.CameraDemoActivity;
 import com.star.demo.customview.CustomViewActivity;
 import com.star.demo.fragment.InteractionDemoActivity;
 import com.star.demo.home.HomeWatcherReceiver;
+import com.star.demo.mvp.MvpActivity;
 import com.star.demo.numberpicker.SampleActivity;
 import com.star.demo.rxjava.RxJavaDemoActivity;
 import com.star.demo.sharedpreference.SPDemoActivity;
