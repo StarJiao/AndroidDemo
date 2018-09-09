@@ -20,7 +20,6 @@ import com.star.demo.home.HomeWatcherReceiver;
 import com.star.demo.mvp.MvpActivity;
 import com.star.demo.numberpicker.SampleActivity;
 import com.star.demo.rxjava.RxJavaDemoActivity;
-import com.star.demo.sharedpreference.SPDemoActivity;
 import com.star.demo.systemui.SystemUIDemoActivity;
 import com.star.demo.tab.CopyTabActivity;
 import com.star.demo.viewpager.ViewPagerDemoActivity;
@@ -70,7 +69,6 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                 intent.setClass(MainActivity.this, ViewPagerDemoActivity.class);
                 break;
             case 1:
-                intent.setClass(MainActivity.this, SPDemoActivity.class);
                 break;
             case 2:
                 intent.setClass(MainActivity.this, FirstActivity.class);

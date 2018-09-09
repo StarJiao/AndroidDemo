@@ -37,21 +37,21 @@ public class CompassView extends View {
     public CompassView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         normalScaleLinePaint = new Paint();
-        normalScaleLinePaint.setColor(Color.DKGRAY);
-        normalScaleLinePaint.setStrokeWidth(6);
+        normalScaleLinePaint.setColor(Color.GRAY);
+        normalScaleLinePaint.setStrokeWidth(8);
 
         deepScaleLinePaint = new Paint();
         deepScaleLinePaint.setColor(Color.RED);
-        deepScaleLinePaint.setStrokeWidth(6);
+        deepScaleLinePaint.setStrokeWidth(8);
 
         innerCirclePaint = new Paint();
         innerCirclePaint.setStrokeWidth(3);
         innerCirclePaint.setAntiAlias(true);
-        innerCirclePaint.setColor(Color.BLACK);
+        innerCirclePaint.setColor(Color.WHITE);
         innerCirclePaint.setStyle(Paint.Style.STROKE);
 
         bubblePaint = new Paint();
-        bubblePaint.setColor(Color.BLUE);
+        bubblePaint.setColor(Color.GREEN);
         bubblePaint.setAntiAlias(true);
         bubblePaint.setStrokeWidth(3);
         bubblePaint.setStyle(Paint.Style.FILL);

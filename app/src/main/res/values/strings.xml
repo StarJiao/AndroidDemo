@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- default -->
-    <string name="app_name">Demo</string>
+    <string name="app_name">StarDemo</string>
     <string name="display">Display</string>
     <!-- main activity -->
     <string-array name="feature_list">
         <item>ViewPager示例</item>
-        <item>SP示例</item>
+        <item>××示例</item>
         <item>动画切换示例</item>
         <item>RxJava示例</item>
         <item>view切换示例</item>
