@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import com.star.demo.animation.FirstActivity;
 import com.star.demo.application.AppUtil;
 import com.star.demo.camera.CameraDemoActivity;
@@ -17,6 +16,7 @@ import com.star.demo.compass.CompassActivity;
 import com.star.demo.customview.CustomViewActivity;
 import com.star.demo.fragment.InteractionDemoActivity;
 import com.star.demo.home.HomeWatcherReceiver;
+import com.star.demo.launchmode.ActivityA;
 import com.star.demo.mvp.MvpActivity;
 import com.star.demo.numberpicker.SampleActivity;
 import com.star.demo.rxjava.RxJavaDemoActivity;
@@ -69,6 +69,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                 intent.setClass(MainActivity.this, ViewPagerDemoActivity.class);
                 break;
             case 1:
+                intent.setClass(MainActivity.this, ActivityA.class);
                 break;
             case 2:
                 intent.setClass(MainActivity.this, FirstActivity.class);

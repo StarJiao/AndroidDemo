@@ -21,13 +21,7 @@ public class ExampleUnitTest {
 //        testThreadJoin();
 //        testQuickSort();
 //        testWaitNotify();
-//        testRxDemo();
         System.out.println((float) (4 >> 1));
-    }
-
-    private void testRxDemo() {
-        RxDemo demo = new RxDemo();
-        demo.fun();
     }
 
     private void testWaitNotify() {

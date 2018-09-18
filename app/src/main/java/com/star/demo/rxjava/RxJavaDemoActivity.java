@@ -16,6 +16,7 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by Star on 2016/6/2.
@@ -36,13 +37,9 @@ public class RxJavaDemoActivity extends Activity {
                 emitter.onNext("hello");
             }
         });
-        /**************************/
-//        Observable<String> observable = Observable.just("hello");
-        /**************************/
         Observer<String> observer = new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
-
             }
 
             @Override
@@ -60,9 +57,17 @@ public class RxJavaDemoActivity extends Activity {
 
             }
         };
+        observable.subscribeOn(Schedulers.newThread())
+                .subscribeOn(Schedulers.computation())
+                .observeOn(Schedulers.newThread())
+                .doOnNext(new Consumer<String>() {
+                    @Override
+                    public void accept(String s) throws Exception {
 
+                    }
+                }).subscribe(observer);
         /**************************/
-        //观察者
+        //观察者1.1
         Subscriber<String> subscriber = new Subscriber<String>() {
             @Override
             public void onError(Throwable e) {
@@ -85,7 +90,6 @@ public class RxJavaDemoActivity extends Activity {
                 Log.i("tag", s + "Subscriber");
             }
         };
-        observable.subscribe(observer);
         /**************************/
         Consumer<String> action = new Consumer<String>() {
             @Override

@@ -80,7 +80,13 @@
         <activity android:name=".systemui.SystemUIDemoActivity" />
         <activity android:name=".customview.CustomViewActivity" />
         <activity android:name=".mvp.MvpActivity" />
-        <activity android:name=".compass.CompassActivity"/>
+        <activity android:name=".compass.CompassActivity" />
+        <activity
+            android:name=".launchmode.ActivityA"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".launchmode.ActivityB"
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>

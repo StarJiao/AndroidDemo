@@ -6,12 +6,12 @@
     <!-- main activity -->
     <string-array name="feature_list">
         <item>ViewPager示例</item>
-        <item>××示例</item>
+        <item>LaunchDemo示例</item>
         <item>动画切换示例</item>
         <item>RxJava示例</item>
         <item>view切换示例</item>
         <item>拍照</item>
-        <item>仿tab</item>
+        <item>tab</item>
         <item>数字选择器</item>
         <item>水平仪</item>
         <item>Fragment切换示例</item>
